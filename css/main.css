@@ -1,0 +1,429 @@
+@charset "UTF-8";
+/* 変数まとめ */
+:root {
+	/* 色管理 */
+	--white-color: #fff;
+	--black-color: #333333;
+	--main-color: #FF002C;
+	--primary-color: #FFDD00;
+  --kv-shadow: rgba(88, 88, 88, 0.3);
+  --shadow: rgba(51, 51, 51, 0.65);
+
+}
+:root {
+  /* フォント */
+	--font: "Noto Sans JP", sans-serif;
+  --ttl-font: "Zen Dots", sans-serif;
+}
+:root {
+	/* コンテンツ幅 */
+  --content-width-sm: 343px;
+  --content-width: 960px;
+  --content-width-lg: 1200px;
+}
+:root {
+	/* z-index */
+	--z-index-back: -1;
+	--z-index-default: 1;
+	--z-index-header: 100;
+	--z-index-menu: 150;
+	--z-index-top: 200;
+	--z-index-modal: 300;
+}
+
+/* 全体 */
+body{
+  font-family: "Noto Sans JP", sans-serif;
+  color: var(--black-color);
+}
+@media screen and (min-width: 1080px) {
+  body {
+		font-size: 18px;
+	}
+}
+
+/*コンテンツ幅の設定*/
+.l_container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 16px;
+  max-width: calc(var(--content-width-lg) + 160px);
+}
+.l_contents {
+  padding: 120px 0;
+}
+@media screen and (min-width: 768px) {
+  .l_container {
+    padding: 0 40px;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .l_container {
+    padding: 0 80px;
+  }
+  .l_contents {
+    padding: 200px 0;
+  }
+}
+
+/* お問い合わせボタン */
+.u_contact__link{
+  position: fixed;
+  bottom: 20%;
+  right: 30%;
+  z-index: var(--z-index-modal);
+  transform: translate(80%, 80%);
+}
+@media screen and (min-width: 768px) {
+  .u_contact__link {
+    bottom: 200px;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .u_contact__link{
+    bottom: 200px;
+    right: 200px;
+  }
+}
+.u_contact-btn{
+  position: relative;
+  height: 100px;
+  width: 100px;
+}
+@media screen and (min-width: 768px) {
+  .u_contact-btn{
+    height: 200px;
+    width: 200px;
+  }
+}
+.u_contact-btn__circle{
+  animation: rotate 15s linear infinite;
+}
+.u_contact-btn__img{
+  background-image: url(../img/お問い合わせ.png);
+  background-size: cover;
+  height: 56px;
+  width: 56px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: ease .4s;
+}
+@media screen and (min-width: 768px) {
+  .u_contact-btn__img{
+    height: 100px;
+    width: 100px;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ヘッダー */
+.l_header {
+  background-color: white;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-index-header);
+  box-shadow: 0 5px 10px var(--kv-shadow);
+}
+@media screen and (min-width: 1080px) {
+  .l_header {
+    height: 120px;
+  }
+}
+.l_header__top-color {
+  height: 6px;
+  background-color: var(--main-color);
+}
+.l_header__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 16px;
+}
+@media screen and (min-width: 768px) {
+  .l_header__wrap {
+    padding: 0 40px;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .l_header__wrap {
+    padding: 24px 80px;
+  }
+}
+
+.l_header__logo {
+  width: 48px;
+}
+@media screen and (min-width: 1080px) {
+  .l_header__logo {
+    width: 80px;
+    margin-top: 0;
+  }
+}
+.l_header__nav {
+  background: var(--main-color);
+  transform: translateX(200%);
+  width: 100vw;
+  height: 100vh;
+  transition: ease .4s;
+}
+@media screen and (min-width: 1080px) {
+  .l_header__nav {
+    background: none;
+    transform: none;
+    height: 100%;
+  }
+}
+.l_header__nav-list {
+  color: var(--white-color);
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 40px;
+}
+@media screen and (min-width: 768px) {
+  .l_header__nav-list {
+    font-size: 24px;
+    padding: 80px 80px;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .l_header__nav-list {
+    color: var(--main-color);
+    flex-direction: row;
+    justify-content: end;
+    gap: 40px;
+    padding: 16px 0;
+  }
+}
+.l_header__nav-item {
+padding: 16px 0;
+}
+@media screen and (min-width: 768px) {
+  .l_header__nav-item {
+    padding: 32px 0;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .l_header__nav-item {
+    padding: 0;
+  }
+}
+
+/* ハンバーガーメニュー */
+.l_header__hamburger {
+  width: 32px;
+  height: 32px;
+  padding: 8px;
+}
+.l_header__hamburger {
+  background-color: transparent;
+  border-color: transparent;
+  z-index: var(--z-index-menu);
+}
+@media screen and (min-width: 1080px) {
+  .l_header__hamburger {
+    display: none;
+  }
+}
+.l_header__hamburger span {
+  width: 16px;
+  height: 2px;
+  background-color: var(--main-color);
+  position: relative;
+  transition: ease .4s;
+  display: block;
+}
+.l_header__hamburger span:nth-child(1) {
+  top: 0;
+}
+.l_header__hamburger span:nth-child(2) {
+  margin: 4px 0;
+}
+.l_header__hamburger span:nth-child(3) {
+  top: 0;
+}
+
+/* ハンバーガーメニュークリック後のスタイル */
+.u_contact-btn__img.active {
+  background-image: url(../img/お問い合わせ白.png);
+}
+.l_header__nav.active {
+  transform: translateX(20%);
+}
+.l_header__hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(-45deg);
+  background: var(--white-color);
+}
+.l_header__hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.l_header__hamburger.active span:nth-child(3) {
+  transform: translateY(-4px) rotate(45deg);
+  background: var(--white-color);
+}
+
+/* ☆共通デザイン☆ */
+/* セクションタイトル */
+.m_section-ttl__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.m_section-ttl__img {
+  height: 40px;
+  width: 40px;
+  background-image: url(../img/テニスラケット.png);
+  background-size: cover;
+}
+@media screen and (min-width: 1080px) {
+  .m_section-ttl__img {
+    height: 80px;
+    width: 80px;
+  }
+}
+.m_section-ttl__sub {
+  font-weight: bold;
+  font-size: 12px;
+}
+@media screen and (min-width: 1080px) {
+  .m_section-ttl__sub {
+    font-size: 20px;
+  }
+}
+.m_section-ttl {
+  font-family: var(--ttl-font);
+  color: var(--main-color);
+  font-size: 33px;
+  position: relative;
+}
+@media screen and (min-width: 1080px) {
+  .m_section-ttl {
+    font-size: 56px;
+  }
+}
+.m_section-ttl::after {
+  content: '';
+  height: 4px;
+  width: 80px;
+  background: var(--primary-color);
+  position: absolute;
+  bottom: -4px;
+  left: 28%;
+}
+@media screen and (min-width: 1080px) {
+  .m_section-ttl::after {
+    height: 8px;
+    width: 200px;
+    bottom: -8px;
+    left: 20%;
+  }
+}
+
+/* リンクボタン */
+.m_link-btn__wrap {
+  margin-top: 40px;
+  background: var(--main-color);
+  border-radius: 30px; 
+  width: 160px;
+  height: 40px;
+  text-align-last: left;
+  box-shadow: 2px 4px rgba(88, 88, 88, 0.4);
+  padding: 8px 24px;
+}
+@media screen and (min-width: 1080px) {
+  .m_link-btn__wrap {
+    margin-top: 120px;
+  }
+}
+.m_link-btn__wrap:hover {
+  transform: translateY(4px);
+  box-shadow: none;
+  background: var(--primary-color);
+}
+.m_link-btn {
+  color: var(--white-color);
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+}
+.m_link-btn::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid var(--white-color);
+  border-right: 2px solid var(--white-color);
+  position: absolute;
+  top: 50%;
+  right: -30%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+/* トップへ戻る */
+.m_top__btn {
+  font-weight: bold;
+  left: 40px;
+  display: block;
+  margin-top: 120px;
+  position: relative;
+}
+.m_top__btn:hover {
+  color: var(--main-color);
+}
+@media screen and (min-width: 1080px) {
+  .m_top__btn {
+    margin-top: 200px;
+    font-size: 20px;
+  }
+}
+.m_top__btn::before {
+  content: '';
+  position: absolute;
+  left: -32px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-right: 20px solid #ff002c;
+  border-left: 0;
+}
+@media screen and (min-width: 1080px) {
+  .m_top__btn::before {
+    left: -40px;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 27px solid #ff002c;
+  }
+}
+
+/* フッター */
+.l_footer {
+  background: var(--main-color);
+  font-weight: bold;
+  color: var(--white-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+}
+@media screen and (min-width: 1080px) {
+  .l_footer {
+    height: 80px;
+  }
+}

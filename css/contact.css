@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/* 変数まとめ */
+:root {
+	/* 色管理 */
+	--white-color: #fff;
+	--black-color: #333333;
+	--main-color: #FF002C;
+	--primary-color: #FFDD00;
+  --kv-shadow: rgba(88, 88, 88, 0.3);
+  --shadow: rgba(51, 51, 51, 0.65);
+
+}
+:root {
+  /* フォント */
+	--font: "Noto Sans JP", sans-serif;
+  --ttl-font: "Zen Dots", sans-serif;
+}
+:root {
+	/* コンテンツ幅 */
+  --content-width-sm: 343px;
+  --content-width: 960px;
+  --content-width-lg: 1200px;
+}
+:root {
+	/* z-index */
+	--z-index-back: -1;
+	--z-index-default: 1;
+	--z-index-header: 100;
+	--z-index-menu: 150;
+	--z-index-top: 200;
+	--z-index-modal: 300;
+}
