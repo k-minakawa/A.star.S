@@ -339,6 +339,33 @@ body{
   }
 }
 
+/* ページタイトル */
+.m_page-ttl {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 120px;
+  position: relative;
+}
+@media screen and (min-width: 1080px) {
+  .m_page-ttl {
+    font-size: 40px;
+    margin-top: 200px;
+  }
+}
+.m_page-ttl::before {
+  content: 'About';
+  width: 100%;
+  font-family: var(--ttl-font);
+  font-size: 64px;
+  color: rgba(255, 0, 44, 0.2);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: var(--z-index-back);
+}
+
 /* リンクボタン */
 .m_link-btn__wrap {
   margin-top: 40px;
@@ -374,45 +401,45 @@ body{
   border-right: 2px solid var(--white-color);
   position: absolute;
   top: 50%;
-  right: -30%;
+  right: -16px;
   transform: translateY(-50%) rotate(45deg);
 }
 
 /* トップへ戻る */
-.m_top__btn {
-  font-weight: bold;
-  left: 40px;
-  display: block;
+.m_top-btn__wrap {
   margin-top: 120px;
-  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
-.m_top__btn:hover {
+@media screen and (min-width: 1080px) {
+  .m_top-btn__wrap {
+    margin-top: 200px;
+    gap: 16px;
+  }
+}
+.m_top-btn__triangle {
+  display: block;
+  width:0;
+  height:0;
+  border-style:solid;
+  border-width: 12px 20.8px 12px 0;
+  border-color: transparent var(--main-color) transparent transparent;
+}
+@media screen and (min-width: 1080px) {
+  .m_top-btn__triangle {
+    border-width: 16px 27.7px 16px 0;
+  }
+}
+.m_top-btn {
+  font-weight: bold;
+}
+.m_top-btn:hover {
   color: var(--main-color);
 }
 @media screen and (min-width: 1080px) {
-  .m_top__btn {
-    margin-top: 200px;
+  .m_top-btn {
     font-size: 20px;
-  }
-}
-.m_top__btn::before {
-  content: '';
-  position: absolute;
-  left: -32px;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-top: 12px solid transparent;
-  border-bottom: 12px solid transparent;
-  border-right: 20px solid #ff002c;
-  border-left: 0;
-}
-@media screen and (min-width: 1080px) {
-  .m_top__btn::before {
-    left: -40px;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
-    border-right: 27px solid #ff002c;
   }
 }
 
