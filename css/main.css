@@ -47,20 +47,17 @@ body{
   margin-left: auto;
   margin-right: auto;
   padding: 0 16px;
-  max-width: calc(var(--content-width-lg) + 160px);
+  max-width: 960px;
 }
 .l_contents {
   padding: 120px 0;
 }
 @media screen and (min-width: 768px) {
   .l_container {
-    padding: 0 40px;
+    padding: 0 80px;
   }
 }
 @media screen and (min-width: 1080px) {
-  .l_container {
-    padding: 0 80px;
-  }
   .l_contents {
     padding: 200px 0;
   }
@@ -344,13 +341,11 @@ body{
   font-size: 24px;
   font-weight: bold;
   text-align: center;
-  margin-top: 120px;
   position: relative;
 }
 @media screen and (min-width: 1080px) {
   .m_page-ttl {
     font-size: 40px;
-    margin-top: 200px;
   }
 }
 .m_page-ttl::before {
@@ -401,7 +396,7 @@ body{
   border-right: 2px solid var(--white-color);
   position: absolute;
   top: 50%;
-  right: -16px;
+  right: -24px;
   transform: translateY(-50%) rotate(45deg);
 }
 
@@ -457,4 +452,44 @@ body{
   .l_footer {
     height: 80px;
   }
+}
+
+/* ☆トップページ☆ */
+/* KV */
+.l_kv {
+  height: 100vh;
+  background: linear-gradient(rgba(88, 88, 88, 0.3), rgba(88, 88, 88, 0.3)),
+    url(../img/KV.jpg) center center / cover;
+  z-index: var(--z-index-back);
+  position: relative;
+}
+.l_kv__ttl-img {
+  position: absolute;
+  z-index: var(--z-index-default);
+  width: 240px;
+  bottom: 15%;
+  margin-left: 16px;
+}
+@media screen and (min-width: 768px) {
+  .l_kv__ttl-img {
+    width: 600px;
+    margin-left: 40px;
+  }
+}
+
+/* お知らせ */
+.l_top-info__x {
+  border: 1px solid var(--main-color);
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 40px;
+}
+@media screen and (min-width: 1080px) {
+  .l_top-info__x {
+    margin-top: 120px;
+  }
+}
+.l_top-info__link {
+  margin-left: auto;
+  margin-right: auto;
 }
