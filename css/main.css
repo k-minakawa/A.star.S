@@ -216,7 +216,7 @@ body{
   }
 }
 .l_header__nav-item {
-padding: 16px 0;
+    padding: 16px 0;
 }
 @media screen and (min-width: 768px) {
   .l_header__nav-item {
