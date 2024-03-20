@@ -188,6 +188,7 @@ body{
     background: none;
     transform: none;
     height: 100%;
+    position: static;
   }
 }
 .l_header__nav-list {
