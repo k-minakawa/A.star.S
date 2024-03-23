@@ -603,6 +603,29 @@ body{
 }
 
 /* 新規加入 */
+@media screen and (min-width: 1080px) {
+  .l_top-member {
+    margin: 0 calc(50% - 50vw);
+    width: 100vw;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .l_top-member__wrap {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 80px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .l_top-member__txt-wrap {
+    width: calc(100% - 560px - 80px);
+  }
+}
+
 .l_top-member__txt {
   margin-top: 40px;
 }
@@ -612,6 +635,42 @@ body{
   }
 }
 .l_top-member__link {
-margin-left: auto;
-margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+.l_top-member__img-wrap {
+  margin-top: 40px;
+  height: 320px;
+  position: relative;
+  width: 343px;
+}
+@media screen and (min-width: 768px) {
+  .l_top-member__img-wrap {
+    width: 560px;
+    height: 630px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.l_top-member__img1 {
+  position: absolute;
+  z-index: var(--z-index-back);
+  width: 180px;
+  right: 0;
+}
+@media screen and (min-width: 768px) {
+  .l_top-member__img1 {
+    width: 360px;
+  }
+}
+.l_top-member__img2 {
+  position: absolute;
+  width: 200px;
+  top: 160px;
+}
+@media screen and (min-width: 768px) {
+  .l_top-member__img2 {
+    width: 400px;
+    top: 320px;
+  }
 }
