@@ -400,13 +400,14 @@ body{
   font-size: 64px;
   color: rgba(255, 0, 44, 0.2);
   position: absolute;
-  bottom: 0;
+  bottom: -25%;
   left: 50%;
   transform: translateX(-50%);
   z-index: var(--z-index-back);
 }
 @media screen and (min-width: 1080px) {
   .m_page-ttl::before {
+    bottom: -40%;
     font-size: 128px;
   }
 }

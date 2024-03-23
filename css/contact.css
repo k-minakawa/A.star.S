@@ -30,3 +30,41 @@
 	--z-index-top: 200;
 	--z-index-modal: 300;
 }
+
+.l_contact {
+	margin-top: 80px;
+}
+@media screen and (min-width: 1080px) {
+	.l_contact {
+		margin-top: 120px;
+	}
+}
+.l_contact__ttl {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+}
+@media screen and (min-width: 1080px) {
+  .l_contact__ttl {
+    font-size: 40px;
+  }
+}
+.l_contact__ttl::before {
+  content: 'Contact';
+  width: 100%;
+  font-family: var(--ttl-font);
+  font-size: 64px;
+  color: rgba(255, 0, 44, 0.2);
+  position: absolute;
+  bottom: -25%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: var(--z-index-back);
+}
+@media screen and (min-width: 1080px) {
+  .l_contact__ttl::before {
+    bottom: -40%;
+    font-size: 128px;
+  }
+}
