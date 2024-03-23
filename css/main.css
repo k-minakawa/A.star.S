@@ -8,7 +8,6 @@
 	--primary-color: #FFDD00;
   --kv-shadow: rgba(88, 88, 88, 0.3);
   --shadow: rgba(51, 51, 51, 0.65);
-
 }
 :root {
   /* フォント */
@@ -422,7 +421,7 @@ body{
   width: 160px;
   height: 40px;
   text-align-last: left;
-  box-shadow: 2px 4px rgba(88, 88, 88, 0.4);
+  box-shadow: 2px 4px var(--kv-shadow);
   padding: 8px 24px;
 }
 @media screen and (min-width: 1080px) {
@@ -511,7 +510,7 @@ body{
 /* KV */
 .l_kv {
   height: 100vh;
-  background: linear-gradient(rgba(88, 88, 88, 0.3), rgba(88, 88, 88, 0.3)),
+  background: linear-gradient(var(--kv-shadow), var(--kv-shadow)),
     url(../img/KV.jpg) center center / cover;
   z-index: var(--z-index-back);
   position: relative;
@@ -550,10 +549,10 @@ body{
 /* About */
 .l_top-about{
   color: var(--white-color);
-  text-shadow: 4px 4px 4px rgba(51, 51, 51, 0.65);
+  text-shadow: 4px 4px 4px var(--shadow);
   width: 100vw;
   margin: 0 calc(50% - 50vw);
-  background: linear-gradient(rgba(51, 51, 51, 0.65), rgba(51, 51, 51, 0.65)),
+  background: linear-gradient(var(--shadow), var(--shadow)),
   url(../img/チーム紹介.jpg) left center / 200%;
 }
 @media screen and (min-width: 1080px) {
