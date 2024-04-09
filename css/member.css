@@ -1,32 +1,390 @@
 @charset "UTF-8";
 /* 変数まとめ */
 :root {
-	/* 色管理 */
-	--white-color: #fff;
-	--black-color: #333333;
-	--main-color: #FF002C;
-	--primary-color: #FFDD00;
+  /* 色管理 */
+  --white-color: #fff;
+  --black-color: #333333;
+  --main-color: #ff002c;
+  --primary-color: #ffdd00;
   --kv-shadow: rgba(88, 88, 88, 0.3);
   --shadow: rgba(51, 51, 51, 0.65);
-
 }
 :root {
   /* フォント */
-	--font: "Noto Sans JP", sans-serif;
+  --font: "Noto Sans JP", sans-serif;
   --ttl-font: "Zen Dots", sans-serif;
 }
 :root {
-	/* コンテンツ幅 */
+  /* コンテンツ幅 */
   --content-width-sm: 343px;
   --content-width: 960px;
   --content-width-lg: 1200px;
 }
 :root {
-	/* z-index */
-	--z-index-back: -1;
-	--z-index-default: 1;
-	--z-index-header: 100;
-	--z-index-menu: 150;
-	--z-index-top: 200;
-	--z-index-modal: 300;
+  /* z-index */
+  --z-index-back: -1;
+  --z-index-default: 1;
+  --z-index-header: 100;
+  --z-index-menu: 150;
+  --z-index-top: 200;
+  --z-index-modal: 300;
+}
+
+.l_member {
+  margin-top: 80px;
+}
+@media screen and (min-width: 1080px) {
+  .l_member {
+    margin-top: 120px;
+  }
+}
+
+.l_member_contents {
+  margin-top: 160px;
+}
+
+.l_member__ttl {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  margin-bottom: 175px;
+}
+@media screen and (min-width: 1080px) {
+  .l_member__ttl {
+    font-size: 40px;
+  }
+}
+.l_member__ttl::before {
+  content: "Membership";
+  width: 100%;
+  font-family: var(--ttl-font);
+  font-size: 40px;
+  color: rgba(255, 0, 44, 0.2);
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: var(--z-index-back);
+}
+@media screen and (min-width: 1080px) {
+  .l_member__ttl::before {
+    bottom: -40%;
+    font-size: 128px;
+  }
+}
+
+.m_section-ttl {
+  font-size: 24px;
+}
+
+@media screen and (min-width: 1080px) {
+  .m_section-ttl {
+    font-size: 56px;
+  }
+}
+
+/* スケジュール */
+.member-schedule {
+  color: var(--white-color);
+  text-shadow: 4px 4px 4px var(--shadow);
+  width: 100vw;
+  margin: 0 calc(50% - 50vw);
+  background: linear-gradient(var(--shadow), var(--shadow)),
+    url(../img/活動場所.jpg) left center / cover;
+}
+@media screen and (min-width: 1080px) {
+  .member-schedule {
+    background-size: cover;
+  }
+}
+.member-schedule__wrap {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 16px;
+  max-width: 766px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (min-width: 1080px) {
+  .member-schedule__wrap {
+    flex-direction: row;
+  }
+}
+
+.member_schedule-title {
+  text-align: center;
+  margin-bottom: 56px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.member_schedule-txt {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.member_schedule-txt:not(:first-child) {
+  margin-top: 40px;
+}
+
+.member-schedule__txt:not(:first-child) {
+  margin-top: 80px;
+}
+@media screen and (min-width: 1080px) {
+  .member-schedule__txt:not(:first-child) {
+    margin-top: 0;
+  }
+}
+
+.member_schedule-memo_wrapper {
+  max-width: 766px;
+  margin: auto;
+  margin-top: 80px;
+}
+
+/* 会費 */
+.member_fee-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1120px;
+  margin: 80px auto;
+}
+
+@media screen and (min-width: 1080px) {
+  .member_fee-contents {
+    margin-top: 120px;
+    gap: 80px;
+    flex-direction: row;
+  }
+}
+
+.member_fee-box {
+  width: 320px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.member_fee-box:not(:first-child) {
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 1080px) {
+  .member_fee-box:not(:first-child) {
+    margin-top: 0;
+  }
+}
+
+.member_fee-head,
+.member_fee-fee {
+  background: var(--main-color);
+  color: var(--white-color);
+  border-color: #fff;
+  border-style: none none solid none;
+}
+.member_fee-box:nth-child(2) .member_fee-head,
+.member_fee-box:nth-child(2) .member_fee-fee {
+  background: var(--primary-color);
+  color: var(--black-color);
+}
+
+.member_fee-head {
+  font-size: 20px;
+  padding: 8px 0;
+}
+
+.member_price {
+  font-size: 40px;
+}
+
+.member_time {
+  font-size: 32px;
+}
+
+.member_fee-chu_contents {
+  margin-top: 80px;
+}
+
+@media screen and (min-width: 1080px) {
+  .member_fee-chu_contents {
+    margin-top: 120px;
+  }
+}
+
+.member_fee-chu_txt {
+  margin-top: 20px;
+}
+
+/* 服装・持ち物 */
+.member-essentials {
+  color: var(--white-color);
+  text-shadow: 4px 4px 4px var(--shadow);
+  width: 100vw;
+  margin: 120px calc(50% - 50vw) 0;
+  background: linear-gradient(var(--shadow), var(--shadow)),
+    url(../img/服装.jpg) left center / cover;
+}
+@media screen and (min-width: 1080px) {
+  .member-essentials {
+    background-size: cover;
+  }
+}
+.member-essentials__wrap {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 16px;
+  max-width: 850px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 120px;
+}
+
+@media screen and (min-width: 1080px) {
+  .member-essentials__wrap {
+    flex-direction: row;
+    align-items: start;
+    gap: 120px;
+  }
+}
+
+.member_essentials-title {
+  text-align: center;
+  margin-bottom: 56px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.member_essentials-txt {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.member_essentials-txt:not(:first-child) {
+  margin-top: 40px;
+}
+
+.member-essentials__txt:not(:first-child) {
+  margin-top: 80px;
+}
+@media screen and (min-width: 1080px) {
+  .member-essentials__txt:not(:first-child) {
+    margin-top: 0;
+  }
+}
+
+/* 入会について */
+
+.member_joining-title {
+  margin-top: 120px;
+  text-align: center;
+}
+
+/* お問い合わせボタン */
+
+.member_contact__link{
+	margin: auto;
+    display: block;
+    width: 100px;
+    margin-top: 72px;
+  }
+
+@media screen and (min-width: 1080px) {
+  .member_contact__link {
+    width: 200px;
+  }
+}
+
+.member_contact-btn {
+  position: relative;
+  height: 100px;
+  width: 100px;
+}
+@media screen and (min-width: 768px) {
+  .member_contact-btn {
+    height: 200px;
+    width: 200px;
+  }
+}
+.member_contact-btn__circle {
+  animation: rotate 15s linear infinite;
+}
+.member_contact-btn__img {
+  background-image: url(../img/お問い合わせ.png);
+  background-size: cover;
+  height: 56px;
+  width: 56px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: ease 0.4s;
+}
+@media screen and (min-width: 768px) {
+  .member_contact-btn__img {
+    height: 100px;
+    width: 100px;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.member_joining-wrap {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 16px;
+  max-width: 850px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 120px;
+}
+
+@media screen and (min-width: 1080px) {
+  .member_joining-wrap {
+    flex-direction: row;
+    align-items: start;
+    gap: 120px;
+  }
+}
+
+.member_joining-title {
+  font-size: 20px;
+}
+
+.member_joining-txt {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+.member_joining-txt_wrap:not(:first-child) {
+  margin-top: 40px;
+}
+
+.member_joining-txt_wrap:not(:first-child) {
+  margin-top: 80px;
+}
+@media screen and (min-width: 1080px) {
+  .member_joining-txt_wrap:not(:first-child) {
+    margin-top: 0;
+  }
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
 }
