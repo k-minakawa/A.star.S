@@ -309,7 +309,7 @@ body{
   font-weight: bold;
   font-size: 12px;
 }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 768px) {
   .m_section-ttl__sub {
     font-size: 20px;
   }
@@ -353,7 +353,7 @@ body{
   color: var(--main-color);
   font-size: 33px;
 }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 768px) {
   .m_section-subttl {
     font-size: 56px;
   }
@@ -552,11 +552,23 @@ body{
   text-shadow: 4px 4px 4px var(--shadow);
   width: 100vw;
   margin: 0 calc(50% - 50vw);
-  background: linear-gradient(var(--shadow), var(--shadow)),
-  url(../img/チーム紹介.jpg) left center / 200%;
+  position: relative;
+  z-index: 0;
+}
+.l_top-about:before {
+  content: '';
+  background-image: linear-gradient(var(--shadow),var(--shadow)),url('../img/チーム紹介.jpg') ;
+  background-position: center center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(3px);
+  z-index: -1;
 }
 @media screen and (min-width: 1080px) {
-  .l_top-about {
+  .l_top-about:before {
     background-size: cover;
   }
 }
@@ -643,6 +655,7 @@ body{
   height: 320px;
   position: relative;
   width: 343px;
+  filter: blur(1px);
 }
 @media screen and (min-width: 768px) {
   .l_top-member__img-wrap {
