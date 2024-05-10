@@ -1,5 +1,8 @@
 // ローディング
-
+window.onload = function() {
+  const spinner = document.getElementById('loading');
+  spinner.classList.add('loaded');
+}
 
 // ハンバーガー
 const ham = document.querySelector("#js_hamburger");
