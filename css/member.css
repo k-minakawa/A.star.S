@@ -54,7 +54,7 @@
   font-weight: bold;
   text-align: center;
   position: relative;
-  margin-bottom: 175px;
+  margin-bottom: 120px;
 }
 @media screen and (min-width: 768px) {
   .l_member__ttl{
@@ -64,6 +64,7 @@
 @media screen and (min-width: 1080px) {
   .l_member__ttl {
     font-size: 40px;
+    margin-bottom: 160px;
   }
 }
 .l_member__ttl::before {
@@ -317,11 +318,6 @@ position: relative;
   }
 }
 
-.member_essentials-txt {
-  font-size: 20px;
-  font-weight: bold;
-}
-
 .member_essentials-txt:not(:first-child) {
   margin-top: 24px;
 }
@@ -339,7 +335,6 @@ position: relative;
 
 .member_joining-title {
   margin-top: 80px;
-  font-size: 16px;
 }
 @media screen and (min-width: 768px) {
   .member_joining-title {
@@ -398,6 +393,9 @@ position: relative;
     width: 100px;
   }
 }
+.member_contact-btn__img:hover {
+  background-image: url(../img/お問い合わせ黄.png);
+}
 @keyframes rotate {
   0% {
     transform: rotate(0);
@@ -416,6 +414,7 @@ position: relative;
   flex-direction: column;
   align-items: center;
   margin-top: 120px;
+  gap: 24px;
 }
 
 @media screen and (min-width: 768px) {
@@ -432,6 +431,9 @@ position: relative;
     gap: 120px;
   }
 }
+.member_joining-ttl {
+  text-align: center;
+}
 .member_joining-txt {
   font-size: 20px;
   font-weight: bold;
@@ -444,17 +446,8 @@ position: relative;
     font-size: 32px;
   }
 }
-.member_joining-txt_wrap:not(:first-child) {
-  margin-top: 40px;
-}
-
-.member_joining-txt_wrap:not(:first-child) {
-  margin-top: 80px;
-}
-@media screen and (min-width: 1080px) {
-  .member_joining-txt_wrap:not(:first-child) {
-    margin-top: 0;
-  }
+.member_joining-txt:hover {
+  color: var(--primary-color);
 }
 
 .is-hidden {

@@ -107,6 +107,15 @@
 		width: 432px;
 	}
 }
+.l_contact-tel__box-wrap:hover {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+@media screen and (min-width: 1080px) {
+	.l_contact-tel__box-wrap:hover {
+		transform: translateY(8px);
+	}
+}
 .l_contact-tel__box-txt {
 	display: flex;
 	align-items: center;

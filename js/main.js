@@ -1,3 +1,7 @@
+// ローディング
+
+
+// ハンバーガー
 const ham = document.querySelector("#js_hamburger");
 const nav = document.querySelector("#js_nav");
 const btn = document.querySelector("#js_btn");

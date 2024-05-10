@@ -31,21 +31,23 @@
 	--z-index-modal: 300;
 }
 
-/*
-about
-*/
+/* about */
 
-.main_visual {
-	margin-top: 120px;
+
+.l_about {
+	margin-top: 80px;
 }
-
+@media screen and (min-width: 1080px) {
+	.l_about {
+		margin-top: 120px;
+	}
+}
 .main_visial-ttl {
 	font-size: 24px;
 	font-weight: bold;
 	text-align: center;
 	position: relative;
 }
-
 @media screen and (min-width: 1080px) {
     .main_visial-ttl {
         font-size: 40px;
@@ -82,80 +84,14 @@ about
 /*
 vision
 */
-
-
-
-.m_vision_wrap::after {
-	content: '';
-	height: 4px;
-	width:	303px;
-	background: var(--primary-color);
-	position: absolute;
-	left: 15%;
+.m_vision_wrap {
+	margin-top: 120px;
 }
-
 @media screen and (min-width: 1080px) {
-    .m_vision_wrap::after {
-		width: 1126px;
-		left: 16%;
+	.m_vision_wrap {
+		margin-top: 160px;
 	}
 }
-
-.m_vision-ttl__wrap{
-	display: flex;
-	align-items: center;
-	margin-left: 16px;
-	
-}
-
-.m_vision-ttl__img{
-	height: 40px;
-	width: 40px;
-	align-items: center;
-	background-image: url(../img/テニスラケット.png);
-	background-size: cover;
-	margin-top: 16px;
-}
-
-@media screen and (min-width: 1080px) {
-    .m_vision-ttl__img {
-		height: 80px;
-		width: 80px;
-		margin-top: 0px;
-	}
-}
-
-.m_vision-ttl__txt {
-	position: relative;
-}
-
-.m_vision-ttl__sub{
-	position: absolute;
-	top: 0px;
-	font-weight: bold;
-	font-size: 12px;
-}
-
-
-@media screen and (min-width: 1080px) {
-    .m_vision-ttl__sub{
-		font-size: 20px;
-	}
-}
-
-.m_vision-ttl {
-	font-family: var(--ttl-font);
-	color: var(--main-color);
-	font-size: 33px;
-	position: relative;
-}
-
-@media screen and (min-width: 1080px) {
-    .m_vision-ttl {
-		font-size: 64px;
-	}
-}
-
 .vision_list_wrap {
 	margin-top: 80px;
 }
@@ -165,58 +101,75 @@ vision
 		margin-top: 120px;
 	}
 }
-
+.vision_list {
+	width: 100vw;
+	margin: 0 calc(50% - 50vw);
+}
 @media screen and (min-width: 1080px) {
 	.vision_list {
 		display: flex;
-		width: 100vw;
-		margin: 0 calc(50% - 50vw);
+
 	}
 }
 
 .vision_items {
 	position: relative;
 	background-color: #333333;
-	width: calc(100% / 3);
-}
 
+}
+@media screen and (min-width: 1080px) {
+	.vision_items {
+		width: calc(100% / 3);
+	}
+
+}
 .vision_item-photo {
 	width: 100%;
 	height: 200px;
 	opacity: 0.4;
-	object-fit: cover;
-	background-size: 200%;
+	background-size: cover;
 	background-position: center ;
+	background-repeat: no-repeat;
 }
 
 @media screen and (min-width: 1080px) {
 	.vision_item-photo {
 		width: 100%;
-		height: 755px;
+		height: 480px;
 	}
 	
 }
 
 .__delectation {
 	background-image: url(../img/KV.jpg);
+	filter: blur(3px);
+  z-index: -1;
 }
 .__delectation2 {
 	background-image: url(../img/育成.jpg);
+	filter: blur(3px);
+  z-index: -1;
 }
 .__delectation3 {
 	background-image: url(../img/繋がり.jpg);
+	filter: blur(3px);
+  z-index: -1;
 }
 
 .vision_item-ttl__txt{
-	width: 85%;
 	position: absolute;
-	top: 25%;
-	left: 50%;
-	transform: translateX(-50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 	color: var(--white-color);
+	width: 320px;
+	text-align: center;
 }
-
-
+@media screen and (min-width: 1080px) {
+	.vision_item-ttl__txt {
+		width: 360px;
+	}
+}
 .vision_item-ttl {
 	text-align: center;
 	font-weight: bold;
@@ -225,42 +178,30 @@ vision
 
 @media screen and (min-width: 1080px) {
 	.vision_item-ttl {
-		font-size: 48px;
+		font-size: 32px;
 	}
 }
 
 .vision_item-ttl__sub {
 	margin-top: 24px;
-	font-size: 16px;
-}
-
-@media screen and (min-width: 1080px) {
-    .vision_item-ttl__sub {
-		font-size: 24px;
-	}
 }
 
 .staff_wrap {
 	width: 100%;
-	margin: 0 auto;
 }
 
 .staff_main-image {
-	margin: 80px auto;;
-	width: 343px;
-	
+	margin: 80px auto;
 }
 
 @media screen and (min-width: 1080px) {
     .staff_main-image {
-		width: 960px;
 		margin-top: 120px;
 	}
 }
 
 .staff_introduction {
 	margin-top: 80px;
-	width: 343px;
 }
 
 @media screen and (min-width: 1080px) {
@@ -311,19 +252,20 @@ vision
 }
 
 .staff_txt {
-	width: 240px;
-	height: 111px;
+	width: calc(100% - 80px - 16px);
+	height: 120px;
 	padding: 8px;
-	font-size: 16px;
-	line-height: 1.5;
 	background-color: var(--main-color);
 	color: var(--white-color);
 	display: flex;
-	justify-content: space-around;
 	align-items: center;
 	position: relative;
 }
-
+@media screen and (min-width: 768px) {
+	.staff_txt {
+		padding: 16px;
+	}
+}
 .staff_txt__triangle {
 	content: "";
 	display: block;
@@ -359,22 +301,19 @@ vision
 
 .contact_wrap {
 	margin: 120px auto;
-	width: 240px;
 }
 
 @media screen and (min-width: 1080px) {
     .contact_wrap {
 		margin-top: 160px;
 		width: 960px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
 	}
 }
 
 .contact{
-	text-align: center;
+	font-weight: bold;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 @media screen and (min-width: 1080px) {
@@ -386,20 +325,23 @@ vision
 
 .contact_text {
 	text-align: center;
-	letter-spacing: 0.3em;
 }
 
 @media screen and (min-width: 1080px) {
     .contact_text {
-		font-size: 24px;
 		letter-spacing: 0;
 	}
 }
 
-.contact_text > span {
-	background: linear-gradient(transparent 30% , rgba(255, 0, 44, 0.6) 70%);
+.contact_sub__txt {
+	font-size: 24px;
+	background-image: linear-gradient(transparent 50%, rgba(255, 0, 44, 0.5) 0%);
 }
-
+@media screen and (min-width: 1080px) {
+	.contact_sub__txt {
+		font-size: 28px;
+	}
+}
 .contact_info {
 	width: 240px;
 	height: 160px;
@@ -407,17 +349,38 @@ vision
 	border-radius: 30px;
 	background-color: #333333;
 	position: relative;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 @media screen and (min-width: 1080px) {
     .contact_info {
 		width: 360px;
 		height: 240px;
+		margin-top: 80px;
 	}
 }
 
 .contact_info > a {
 	margin: 0 auto;
+}
+.contact_info {
+  box-shadow: 8px 8px 0 var(--main-color); 
+}
+.contact_info:hover {
+  transform: translateY(8px);
+  box-shadow: none;
+	animation: anima-button-30 1s;
+}
+
+
+@keyframes anima-button-30 {
+	0% {
+			box-shadow: 0 0 0 0 rgba(255, 0, 44, 0.5);
+	}
+	100% {
+			box-shadow: 0 0 0 1.2em rgb(0 0 0 / 0%);
+	}
 }
 
 .contact_photo {
@@ -447,7 +410,7 @@ vision
 	}
 }
 
-.contact_info2 {
+/* .contact_info2 {
 	position: absolute;
 	top: 5%;
 	left: 3%;
@@ -457,7 +420,12 @@ vision
 	background-color: var(--main-color);
 	z-index: -1;
 }
-
+@media screen and (min-width: 1080px) {
+	.contact_info2 {
+		width: 360px;
+		height: 240px;
+	}
+} */
 .__about_page {
 	margin-top: 120px;
 }
